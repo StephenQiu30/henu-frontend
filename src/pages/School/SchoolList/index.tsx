@@ -215,8 +215,8 @@ const SchoolList: React.FC = () => {
           </Space>,
         ]}
         request={async (params, sort, filter) => {
-          const sortField = Object.keys(sort)?.[0] ?? "update_time";
-          const sortOrder = sort?.[sortField] ?? "descend";
+          const sortField = 'update_time';
+          const sortOrder = sort?.[sortField] ?? 'descend';
           const { data, code } = await listSchoolVoByPageUsingPost({
             ...params,
             ...filter,
